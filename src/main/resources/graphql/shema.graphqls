@@ -1,0 +1,22 @@
+
+type Query {
+     listerClient :[Client],
+     clientById(id: String)   : Client,
+
+}
+type Mutation {
+    addClient(clientRequestDto: ClientRequestDto): Client
+}
+
+
+input ClientRequestDto {
+    fullName: String,
+    email: String,
+}
+
+type Client
+{
+    id: Float,
+    fullName: String,
+    email: String,
+}
